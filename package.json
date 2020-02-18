@@ -1,0 +1,17 @@
+{
+  "name": "router",
+  "version": "1.0.0",
+  "description": "A simple Express router",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "test"
+  },
+  "author": "Neildor",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "pug": "^2.0.4"
+  }
+}
