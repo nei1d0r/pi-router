@@ -4,9 +4,12 @@ const port = 3000
 
 const pug = require('pug')
 
+router.set('view engine', 'pug')
 router.use(express.static('./public'))
 
-router.set('view engine', 'pug')
+// import Tools module and instantiate
+const Tools = require('./public/scripts/tools.js')
+const tools = new Tools
 
 router.get('/', (req, res) => {
 	getCurrentTime = () => {
@@ -18,9 +21,10 @@ router.get('/', (req, res) => {
 		{
 			title : `Neildor's Server`,
 			message : "Neildor's server",
-			currentTime : getCurrentTime
+			currentTime: tools.getCurrentTime()
 		}
 	)
 });
 
 router.listen(port, () => console.log(`Listening on port ${port}!`))
+console.log(`${tools.printHello()} Server started: ${tools.getCurrentTime()}`)
