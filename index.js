@@ -3,6 +3,7 @@ const router = express()
 const port = 3000
 
 const pug = require('pug')
+const cookieParser = require('cookie-parser')
 
 router.set('view engine', 'pug')
 router.use(express.static('./public'))
@@ -15,7 +16,8 @@ router.get('/', (req, res) => {
 	getCurrentTime = () => {
         let today = new Date();
         return today.toISOString().substr(11, 8);
-    }
+	}
+	res.cookie('Neildor', 'some-tasty-cookie')
 	res.render(
 		'index',
 		{
