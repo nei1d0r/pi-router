@@ -1,14 +1,17 @@
+// SETUP
 const express = require('express')
 const router = express()
 const port = 3000
 
+// Modules
 const pug = require('pug')
 const cookieParser = require('cookie-parser')
 
+// Views and styles
 router.set('view engine', 'pug')
 router.use(express.static('./public'))
 
-// import Tools module and instantiate
+// local imports and instantiations
 const Tools = require('./public/scripts/tools.js')
 const tools = new Tools
 
