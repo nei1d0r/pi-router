@@ -13,14 +13,12 @@ class Tools {
     }
 
     logger = (userAgent) => {
-        let fs = require('fs');
-        
+        let fs = require('fs');        
         let newLog=`${new Date()},${userAgent}\r`;
 
-        // todo - append to file
         fs.appendFile("file.xls", newLog, function(err){
                 if(err) throw err;
-                console.log('IS WRITTEN')
+                console.log('new log record added')
             }
         );
     }
