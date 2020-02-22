@@ -14,7 +14,7 @@ class Tools {
 
     logger = (userAgent) => {
         let fs = require('fs');        
-        let newLog=`${new Date()},${userAgent}\r`;
+        let newLog=`${new Date(day, month, year)},${userAgent}\r`;
 
         fs.appendFile("file.xls", newLog, function(err){
                 if(err) throw err;
