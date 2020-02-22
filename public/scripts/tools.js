@@ -11,7 +11,7 @@ class Tools {
     printHello = () => {
         return ('Hello')
     }
-
+    // todo - better logging https://itnext.io/setup-logger-for-node-express-app-9ef4e8f73dac
     logger = (userAgent) => {
         let fs = require('fs');        
         let newLog=`${new Date()},${userAgent}\r`;
