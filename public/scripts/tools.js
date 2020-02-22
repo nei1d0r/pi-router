@@ -16,7 +16,7 @@ class Tools {
         let fs = require('fs');        
         let newLog=`${new Date()},${userAgent}\r`;
 
-        fs.appendFile("file.xls", newLog, function(err){
+        fs.appendFile("file.csv", newLog, function(err){
                 if(err) throw err;
                 console.log('new log record added')
             }

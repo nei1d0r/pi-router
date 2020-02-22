@@ -33,5 +33,10 @@ router.get('/', (req, res) => {
 	tools.logger(userAgent)
 });
 
+router.get('/downloadLogs', (req, res) => {
+	const file = 'file.csv'
+	res.download(file)
+});
+
 router.listen(port, () => console.log(`Listening on port ${port}!`))
 console.log(`${tools.printHello()} Server started: ${tools.getCurrentTime()}`)
