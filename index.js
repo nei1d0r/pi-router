@@ -29,6 +29,8 @@ router.get('/', (req, res) => {
 			currentTime: tools.getCurrentTime()
 		}
 	)
+	let userAgent = (req.headers['user-agent'])
+	tools.logger(userAgent)
 });
 
 router.listen(port, () => console.log(`Listening on port ${port}!`))

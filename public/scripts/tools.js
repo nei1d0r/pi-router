@@ -11,6 +11,19 @@ class Tools {
     printHello = () => {
         return ('Hello')
     }
+
+    logger = (userAgent) => {
+        let fs = require('fs');
+        
+        let newLog=`${new Date()},${userAgent}\r`;
+
+        // todo - append to file
+        fs.appendFile("file.xls", newLog, function(err){
+                if(err) throw err;
+                console.log('IS WRITTEN')
+            }
+        );
+    }
 }
 
 
