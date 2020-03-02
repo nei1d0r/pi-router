@@ -29,6 +29,7 @@ router.get('/', (req, res) => {
 			currentTime: tools.getCurrentTime()
 		}
 	)
+	console.log('Home endpoint request successful')
 	let userAgent = (req.headers['user-agent'])
 	tools.logger(userAgent)
 });
