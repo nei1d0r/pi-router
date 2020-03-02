@@ -1,5 +1,3 @@
-// this currently does bugger all!!
-
 const express = require('express')
 
 class Tools {
